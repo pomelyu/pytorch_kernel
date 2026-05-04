@@ -1,0 +1,36 @@
+{
+	"configurations": [
+		{
+			"name": "Win64",
+			"intelliSenseMode": "windows-msvc-x64",
+			"compilerPath": "cl.exe",
+			"cStandard": "c17",
+			"cppStandard": "c++17",
+			"includePath": [
+				"${workspaceFolder}/**",
+				"${env:CONDA_PREFIX}/Lib/site-packages/torch/include",
+				"${env:CONDA_PREFIX}/Lib/site-packages/torch/include/torch/csrc/api/include",
+				"${env:CONDA_PREFIX}/Lib/site-packages/torch/include/THC",
+				"${env:CONDA_PREFIX}/include",
+				"${env:CUDA_PATH}/include"
+			],
+			"defines": [
+				"_CRT_SECURE_NO_WARNINGS"
+			]
+		},
+		{
+		"name": "CUDA",
+		"includePath": [
+			"${workspaceFolder}/**",
+			"/usr/local/cuda/include",
+			"${CUDA_PATH}/include"
+		],
+		"defines": ["__CUDACC__"],
+		"compilerPath": "/usr/local/cuda/bin/nvcc",
+		"cStandard": "c17",
+		"cppStandard": "c++17",
+		"intelliSenseMode": "linux-gcc-x64"
+		}
+	],
+	"version": 4
+}
